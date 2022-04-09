@@ -8,13 +8,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "4.1.2",
-    "@mantine/hooks": "4.1.2",
-    "@mantine/notifications": "4.1.2",
+    "@reduxjs/toolkit": "1.8.1",
+    "@vanilla-extract/css": "1.6.8",
+    "@vanilla-extract/vite-plugin": "3.1.4",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "7.2.8",
+    "vite-tsconfig-paths": "3.4.1"
   },
   "devDependencies": {
+    "@metamask/providers": "8.1.1",
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",

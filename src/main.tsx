@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MantineProvider } from '@mantine/core';
+import 'normalize.css';
+import { Provider } from 'react-redux';
 
+import './styles/index.css';
 import App from './App';
-import { theme } from './theme';
+import { store } from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MantineProvider withNormalizeCSS theme={theme}>
+    <Provider store={store}>
       <App />
-    </MantineProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
