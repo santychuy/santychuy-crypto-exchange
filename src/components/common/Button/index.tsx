@@ -5,16 +5,17 @@ import { container } from './styles.css';
 interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
+  label: string;
 }
 
-const Button: FC<ButtonProps> = ({ children, disabled, onClick }) => (
+const Button: FC<ButtonProps> = ({ disabled, onClick, label }) => (
   <button
     type="button"
     className={container}
     disabled={disabled}
     onClick={onClick}
   >
-    {children}
+    {label}
   </button>
 );
 

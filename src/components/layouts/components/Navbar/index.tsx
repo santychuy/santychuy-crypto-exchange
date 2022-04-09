@@ -41,7 +41,7 @@ const Navbar = () => {
         className={githubIcon}
       />
       {!account && (
-        <Button onClick={handleConnectAccount}>Connect Wallet</Button>
+        <Button onClick={handleConnectAccount} label="Connect Wallet" />
       )}
     </nav>
   );

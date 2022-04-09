@@ -1,10 +1,14 @@
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
 import Navbar from '@/layouts/components/Navbar';
 
 import { mainContainer } from './styles.css';
 
-const MainLayout: FC = ({ children }) => (
+interface MainLayoutProps {
+  children?: ReactNode;
+}
+
+const MainLayout: FC<MainLayoutProps> = ({ children }) => (
   <div>
     <Navbar />
 
