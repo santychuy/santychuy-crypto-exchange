@@ -6,12 +6,13 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   label: string;
+  className?: string;
 }
 
-const Button: FC<ButtonProps> = ({ disabled, onClick, label }) => (
+const Button: FC<ButtonProps> = ({ disabled, onClick, label, className }) => (
   <button
     type="button"
-    className={container}
+    className={`${container} ${className}`}
     disabled={disabled}
     onClick={onClick}
   >

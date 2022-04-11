@@ -2,10 +2,15 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const vars = createGlobalTheme(':root', {
   color: {
-    background: '#1E262E',
+    background: {
+      main: '#1E262E',
+      light: '#303D4A',
+    },
+    outline: '#354555',
     text: {
       light: '#000000',
       dark: '#FFFFFF',
+      gray: '#5B5B5B',
     },
   },
   space: {
