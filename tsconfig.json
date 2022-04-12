@@ -24,7 +24,7 @@
       "@/layouts/*": ["components/layouts/*"],
       "@/styles/*": ["styles/*"],
       "@/store/*": ["store/*"],
-      "@/useRedux": ["hooks/useRedux.ts"],
+      "@/hooks/*": ["hooks/*"],
     }
   },
   "include": ["./scripts", "./test", "./typechain", "src"],

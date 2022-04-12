@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
 import { vars } from '@/theme/index.css';
 
@@ -18,8 +18,20 @@ export const swapButton = style({
   justifySelf: 'center',
 });
 
-export const button = style({
+const baseButton = style({
   height: '45px',
   borderRadius: vars.space[3],
   marginTop: vars.space[1],
+});
+
+export const button = styleVariants({
+  primary: [baseButton],
+  disabled: [
+    baseButton,
+    {
+      background: 'none',
+      backgroundColor: vars.color.background.gray,
+      color: vars.color.text['light-gray'],
+    },
+  ],
 });

@@ -35,6 +35,6 @@ export const balanceLabel = style({
   fontSize: '0.95rem',
   color: vars.color.text.gray,
   alignSelf: 'end',
-  paddingBottom: vars.space[2],
+  paddingBottom: vars.space['1/2'],
   justifySelf: 'flex-end',
 });

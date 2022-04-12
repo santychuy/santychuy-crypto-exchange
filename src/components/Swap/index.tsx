@@ -1,19 +1,38 @@
+import { useConnectWallet } from '@/hooks/useConnectWallet';
+import { useSelector } from '@/hooks/useRedux';
+
 import SwapButton from '../Button/Swap';
 import Button from '../common/Button';
 import InputCurrency from '../Inputs/Currency';
 
 import { container, button, swapButton } from './styles.css';
 
-const Swap = () => (
-  <div className={container}>
-    <InputCurrency token="eth" />
+const Swap = () => {
+  const account = useSelector((state) => state.account.account);
 
-    <SwapButton className={swapButton} />
+  const { connectWallet } = useConnectWallet();
 
-    <InputCurrency token="schy" />
+  const handleButton = async () => {
+    if (!account) {
+      await connectWallet();
+    }
+  };
 
-    <Button label="Connect Wallet" className={button} />
-  </div>
-);
+  return (
+    <div className={container}>
+      <InputCurrency token="eth" />
+
+      <SwapButton className={swapButton} />
+
+      <InputCurrency token="schy" />
+
+      <Button
+        label={account ? 'Swap' : 'Connect Wallet'}
+        className={account ? button.disabled : button.primary}
+        onClick={handleButton}
+      />
+    </div>
+  );
+};
 
 export default Swap;

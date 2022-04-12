@@ -5,16 +5,19 @@ export const vars = createGlobalTheme(':root', {
     background: {
       main: '#1E262E',
       light: '#303D4A',
+      gray: '#333333',
     },
     outline: '#354555',
     text: {
       light: '#000000',
       dark: '#FFFFFF',
       gray: '#5B5B5B',
+      'light-gray': '#737373',
     },
   },
   space: {
     none: '0',
+    '1/2': '2px',
     1: '4px',
     2: '8px',
     3: '12px',
