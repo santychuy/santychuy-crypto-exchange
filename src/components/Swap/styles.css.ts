@@ -32,6 +32,7 @@ export const button = styleVariants({
       background: 'none',
       backgroundColor: vars.color.background.gray,
       color: vars.color.text['light-gray'],
+      cursor: 'auto',
     },
   ],
 });

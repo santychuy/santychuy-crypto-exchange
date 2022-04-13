@@ -14,6 +14,7 @@ export const container = style({
 export const currencyButton = style({
   gridColumn: 'span 2',
   justifySelf: 'flex-end',
+  cursor: 'auto',
 });
 
 export const input = style({
