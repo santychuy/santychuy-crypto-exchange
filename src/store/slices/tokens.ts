@@ -34,8 +34,8 @@ export const tokensSlice = createSlice({
     swapToken: (state) => {
       const { tokenDown, tokenUp } = state;
 
-      state.tokenUp = { ...tokenDown, value: undefined };
-      state.tokenDown = { ...tokenUp, value: undefined };
+      state.tokenUp = tokenDown;
+      state.tokenDown = tokenUp;
     },
     setTokenUp: (state, action: PayloadAction<Token>) => {
       state.tokenUp = action.payload;

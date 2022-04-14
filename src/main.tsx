@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import 'normalize.css';
 import { Provider } from 'react-redux';
+import { Toaster } from 'react-hot-toast';
+import 'normalize.css';
 
 import './styles/index.css';
 import App from './App';
@@ -13,6 +14,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Toaster position="bottom-right" />
       <App />
     </Provider>
   </React.StrictMode>

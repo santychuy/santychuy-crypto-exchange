@@ -1,6 +1,7 @@
+import { toast } from 'react-hot-toast';
+
 import { useConnectWallet } from '@/hooks/useConnectWallet';
-import { useSelector, useDispatch } from '@/hooks/useRedux';
-import { swapToken } from '@/store/slices/tokens';
+import { useSelector } from '@/hooks/useRedux';
 
 import SwapButton from '../Button/Swap';
 import Button from '../common/Button';
@@ -10,7 +11,6 @@ import ResultSwap from './ResultSwap';
 import { container, button, swapButton } from './styles.css';
 
 const Swap = () => {
-  const dispatch = useDispatch();
   const account = useSelector((state) => state.account.account);
   const tokenUp = useSelector((state) => state.tokens.tokenUp);
   const tokenDown = useSelector((state) => state.tokens.tokenDown);
@@ -23,19 +23,14 @@ const Swap = () => {
     }
 
     if (tokenUp.value) {
-      console.log('Ready to Swap!');
+      toast.success('Ready to swap 🚀');
     }
   };
 
   return (
     <div className={container}>
       <InputCurrency />
-      <SwapButton
-        className={swapButton}
-        onClick={() => {
-          dispatch(swapToken());
-        }}
-      />
+      <SwapButton className={swapButton} />
       <ResultSwap />
 
       <Button
