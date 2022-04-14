@@ -23,7 +23,7 @@ const initialState: TokensState = {
     symbol: 'SCHY',
     balance: undefined,
     value: undefined,
-    price: 0.0000025,
+    price: 3.29,
   },
 };
 
@@ -34,8 +34,8 @@ export const tokensSlice = createSlice({
     swapToken: (state) => {
       const { tokenDown, tokenUp } = state;
 
-      state.tokenUp = tokenDown;
-      state.tokenDown = tokenUp;
+      state.tokenUp = { ...tokenDown, value: undefined };
+      state.tokenDown = { ...tokenUp, value: undefined };
     },
     setTokenUp: (state, action: PayloadAction<Token>) => {
       state.tokenUp = action.payload;

@@ -1,11 +1,12 @@
 import { useConnectWallet } from '@/hooks/useConnectWallet';
 import { useSelector, useDispatch } from '@/hooks/useRedux';
-import { swapToken, setTokenDown, setTokenUp } from '@/store/slices/tokens';
+import { swapToken } from '@/store/slices/tokens';
 
 import SwapButton from '../Button/Swap';
 import Button from '../common/Button';
 import InputCurrency from '../Inputs/Currency';
 
+import ResultSwap from './ResultSwap';
 import { container, button, swapButton } from './styles.css';
 
 const Swap = () => {
@@ -28,16 +29,14 @@ const Swap = () => {
 
   return (
     <div className={container}>
-      <InputCurrency token={tokenUp} onChange={setTokenUp} />
-
+      <InputCurrency />
       <SwapButton
         className={swapButton}
         onClick={() => {
           dispatch(swapToken());
         }}
       />
-
-      <InputCurrency token={tokenDown} onChange={setTokenDown} disabled />
+      <ResultSwap />
 
       <Button
         label={
