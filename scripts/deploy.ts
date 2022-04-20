@@ -1,13 +1,12 @@
 import { ethers } from 'hardhat';
 
 async function main() {
-  // We get the contract to deploy
-  const Greeter = await ethers.getContractFactory('Greeter');
-  const greeter = await Greeter.deploy('Hello, Hardhat!');
+  const Token = await ethers.getContractFactory('SantychuyToken');
+  const token = await Token.deploy('Santychuy Token', 'SCHY');
 
-  await greeter.deployed();
+  await token.deployed();
 
-  console.log('Greeter deployed to:', greeter.address);
+  console.log('SantychuyToken deployed to:', token.address);
 }
 
 main().catch((error) => {

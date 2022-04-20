@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "4.5.0",
     "@reduxjs/toolkit": "1.8.1",
     "@vanilla-extract/css": "1.6.8",
     "@vanilla-extract/vite-plugin": "3.1.4",
@@ -43,6 +44,7 @@
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.16",
     "ts-node": "^10.1.0",
+    "tsconfig-paths": "3.14.1",
     "typechain": "^5.1.2",
     "typescript": "^4.5.4",
     "vite": "^2.9.0"

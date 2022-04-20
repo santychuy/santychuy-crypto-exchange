@@ -1,19 +1,21 @@
-import { expect } from 'chai';
+// import { expect } from 'chai';
 import { ethers } from 'hardhat';
 
-describe('Greeter', () => {
-  it("Should return the new greeting once it's changed", async () => {
-    const Greeter = await ethers.getContractFactory('Greeter');
-    const greeter = await Greeter.deploy('Hello, world!');
-    await greeter.deployed();
+import { SantychuyToken } from '../src/types/typechain';
 
-    expect(await greeter.greet()).to.equal('Hello, world!');
+describe('Santychuy Token', () => {
+  let santychuyToken: SantychuyToken;
 
-    const setGreetingTx = await greeter.setGreeting('Hola, mundo!');
+  before(async () => {
+    const SantychuyTokenContract = await ethers.getContractFactory(
+      'SantychuyToken'
+    );
 
-    // wait until the transaction is mined
-    await setGreetingTx.wait();
+    santychuyToken = (await SantychuyTokenContract.deploy(
+      'Santychuy Token',
+      'SCHY'
+    )) as SantychuyToken;
 
-    expect(await greeter.greet()).to.equal('Hola, mundo!');
+    await santychuyToken.deployed();
   });
 });
