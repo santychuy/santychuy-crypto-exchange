@@ -7,6 +7,13 @@ async function main() {
   await token.deployed();
 
   console.log('SantychuyToken deployed to:', token.address);
+
+  const TokenSwap = await ethers.getContractFactory('TokenSwap');
+  const tokenSwap = await TokenSwap.deploy(200, token.address);
+
+  await tokenSwap.deployed();
+
+  console.log('Token Swap deployed to:', tokenSwap.address);
 }
 
 main().catch((error) => {
