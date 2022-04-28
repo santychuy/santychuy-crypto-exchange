@@ -23,7 +23,7 @@ const initialState: TokensState = {
     symbol: 'SCHY',
     balance: undefined,
     value: undefined,
-    price: 3.29,
+    price: 200,
   },
 };
 

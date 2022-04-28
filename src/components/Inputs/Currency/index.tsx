@@ -25,9 +25,10 @@ const InputCurrency = () => {
     dispatch(
       setTokenDown({
         ...tokenResult,
-        value: value
-          ? (Number(value) * tokenInput.price) / tokenResult.price
-          : undefined,
+        value:
+          value && tokenResult.symbol === 'SCHY'
+            ? Number(value) * 200
+            : Number(value) / 200,
       })
     );
   };

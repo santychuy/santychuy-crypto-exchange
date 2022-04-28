@@ -1,4 +1,4 @@
-// import { expect } from 'chai';
+import { expect } from 'chai';
 import { ethers } from 'hardhat';
 
 import { SantychuyToken } from '../src/types/typechain';
@@ -17,5 +17,11 @@ describe('Santychuy Token', () => {
     )) as SantychuyToken;
 
     await santychuyToken.deployed();
+  });
+
+  it('Get Balance of Contract', async () => {
+    const balance = await santychuyToken.balanceOf(santychuyToken.address);
+
+    expect(balance.toString()).to.be.a('string');
   });
 });
