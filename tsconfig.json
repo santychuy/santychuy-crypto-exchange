@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "preserve",
     "target": "ES2018",
-    "module": "ESNext",
+    "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
