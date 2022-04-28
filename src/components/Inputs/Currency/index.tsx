@@ -44,9 +44,7 @@ const InputCurrency = () => {
         value={tokenInput.value}
         onChange={handleChange}
       />
-      <p className={balanceLabel}>
-        Have: {tokenInput.balance?.toFixed(2) ?? '0.00'}
-      </p>
+      <p className={balanceLabel}>Have: {tokenInput.balance ?? '0.00'}</p>
     </div>
   );
 };

@@ -17,9 +17,7 @@ const ResultSwap = () => {
       <p className={tokenResult.value ? labelResult.main : labelResult.empty}>
         {tokenResult.value?.toFixed(2) ?? '0.00'}
       </p>
-      <p className={balanceLabel}>
-        Have: {tokenResult.balance?.toFixed(2) ?? '0.00'}
-      </p>
+      <p className={balanceLabel}>Have: {tokenResult.balance ?? '0.00'}</p>
     </div>
   );
 };
