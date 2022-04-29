@@ -7,8 +7,8 @@
 ## TODOs
 
 - [x] Create Basic Frontend
-- [ ] Create Smart Contract/s (w/testing)
-- [ ] Connect Frontend with Smart Contracts (Create token & able to do swap)
+- [x] Create Smart Contract/s (w/testing)
+- [x] Connect Frontend with Smart Contracts (Create token & able to do swap)
 - [ ] Do swap
 
 ## Nice to have
