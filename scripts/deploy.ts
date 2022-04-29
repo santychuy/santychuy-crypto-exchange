@@ -12,8 +12,10 @@ async function main() {
   const tokenSwap = await TokenSwap.deploy(200);
 
   await tokenSwap.deployed();
+  const santychuyAddress = await tokenSwap.santychuyToken();
 
   console.log('Token Swap deployed to:', tokenSwap.address);
+  console.log('Santychuy Token deployed to:', santychuyAddress);
 }
 
 main().catch((error) => {
