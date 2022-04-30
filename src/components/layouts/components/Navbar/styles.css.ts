@@ -26,6 +26,7 @@ export const githubIcon = style({
 });
 
 export const rightContainer = style({
-  display: 'grid',
-  gridTemplateColumns: '100px 1fr',
+  display: 'flex',
+  alignItems: 'center',
+  columnGap: vars.space[3],
 });
